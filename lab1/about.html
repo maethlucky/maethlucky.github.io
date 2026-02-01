@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <header>
     <h1>About</h1>
 </header>
-<hr>
+
 <nav>
-    <a href="home.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
+    <div class="row">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
 </nav>
-<hr>
+
 <body>
-    <div>
-        <table>
+    <div class="bodyText">
+        <table id="programmingTable">
             <tr>
                 <th>Programming Language</td>
                 <th>Years Experience</td>
@@ -35,25 +39,26 @@
                 <td>4</td>
             </tr>
         </table>
-    </div>
-    <div>
-        <h4>Our Common Hobbies:</h4>
-        <ul>
-            <li>Video games: We all like to play games</li>
-            <li>Listen to Music: Everyone in the group listens to all different types of music</li>
-            <li>Sleeping: We are tired</li>
-        </ul>
+
+        <div id="hobbiesText">
+            <h4>Our Common Hobbies:</h4>
+            <div id="hobbiesList">
+                <ul>
+                    <li>Video games: We all like to play games</li>
+                    <li>Listening to music: Everyone in the group listens to all different types of music</li>
+                    <li>Sleeping: We are tired</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
-<hr>
+
 <footer>
-    <div>
-        <img src="https://imageio.forbes.com/specials-images/imageserve/615f52e55b55ea24044d1792/0x0.jpg?format=jpg&crop=1080,1080,x0,y0,safe&height=200&width=200&fit=bounds" alt="csumb logo" width="" height="75">
-    </div>
-    <div>
-    CST336 Internet Programming. 2026 &#169; Torrealba, Stark, Tan, Tan<br>
-    <b>Disclaimer:</b> The information in this webpage is fictitious.<br>
-    It is used for academic purposes only.
-    </div>
+    <img id="logo" src="https://csumb.edu/media/csumb/legacy/legacy-site-images/section-editors/university-communications/updated-branding/Logo_Wordmark-Reversed-color.jpg" alt="CSUMB logo">
+
+    <p id="footerText">
+        CST336 Internet Programming. 2026 &#169; Torrealba, Stark, Tan, Tan<br>
+        <b>Disclaimer:</b> The information in this webpage is fictitious. It is used for academic purposes only.
+    </p>
 </footer>
 </html>

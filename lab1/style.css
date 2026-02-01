@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(33, 68, 110);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+nav {
+    background-color: rgb(85, 147, 184);
+    border-bottom: 3px solid rgb(33, 68, 110);
+}
+
+a {
+    margin-inline: 20px;
+    margin-block: 7px;
+    padding: 5px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(159, 140, 79);
+    font-size: 1.5em;
+}
+
+a:hover {
+    border: 1px solid white;
+}
+
+body {
+    background-color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.portrait {
+    flex: 1 1 25%;
+    margin: 2%;
+}
+
+.portrait img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.portrait figcaption {
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 1000;
+}
+
+.bodyText {
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+}
+
+#homeIntroText {
+    margin: 10px; 
+}
+
+#homeQuote {
+    margin: 50px;
+}
+
+#programmingTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-block: 60px;
+    margin-inline: auto;
+}
+
+#programmingTable th {
+    border: 1px solid black;
+    padding: 6px;
+    background-color: rgb(159, 140, 79);
+}
+
+#hobbiesText {
+    justify-self: center;
+    width: 30%;
+    text-align: left;
+    margin: 60px;
+}
+
+#hobbiesText h4 {
+    margin-bottom: 10px;
+}
+
+#hobbiesList {
+    justify-self: center;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+#contactForm {
+    display: block;
+    margin: 0 auto;
+    height:650px;
+}
+
+footer {
+    background-color: rgb(33, 68, 110);
+}
+
+#footerText {
+    text-align: center;
+    color: rgb(85, 147, 184);
+    font-size: 0.75em;
+    padding-bottom: 20px;
+}
+
+#logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
