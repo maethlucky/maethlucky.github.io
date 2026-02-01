@@ -18,7 +18,7 @@ nav {
     border-bottom: 3px solid rgb(33, 68, 110);
 }
 
-a {
+nav a {
     margin-inline: 20px;
     margin-block: 7px;
     padding: 5px;
@@ -29,8 +29,16 @@ a {
     font-size: 1.5em;
 }
 
-a:hover {
+nav a:hover {
     border: 1px solid white;
+}
+
+.currentPage {
+    border: 1px solid white;
+}
+
+.currentPage:hover {
+    border: 1px solid black;
 }
 
 body {
