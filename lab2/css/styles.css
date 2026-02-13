@@ -6,32 +6,41 @@ body {
 }
 
 h1 {
-    color: blue;
-    border: 1px solid white;
-    background-color: lightblue;
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
 }
 
 h3 {
     margin: 0;
     color: black;
     background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
-h4 {
-    margin: 0;
+span {
+    display: block;
+    font-size: 1.5em;
+    background-color: lightblue;
+    min-height: 1.3em;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+label {
     color: black;
-    background-color: white;
+    font-size: 1.2em;
 }
 
-h5 {
-    margin: 0;
-    color: black;
-    background-color: white;
+button:hover {
+    text-decoration: underline;  
 }
 
-h6 {
-    margin: 0;
-    color: black;
-    background-color: white;
+#playBtn {
+    font-size: 1.5em;
 }
-

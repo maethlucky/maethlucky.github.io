@@ -21,7 +21,7 @@ function isValid(userGuess) {
         return false;
     }
 
-    if (userGuess < 1 || userGuess > 100) {
+    if (userGuess < 1 || userGuess > 99) {
         alert("Error: guess out of range");
         return false;
     }
@@ -54,12 +54,13 @@ function guess() {
         hiLo.style.color = "green";
         document.querySelector("#userGuesses").textContent = "";
         wins++;
-        document.querySelector("#playBtn").style.display = "block";
+        document.querySelector("#playBtn").style.display = "inline";
         document.querySelector("#guessBtn").style.display = "none";
     }
 
     if (attempts == 7) {
-        hiLo.textContent = "You lost!";
+        hiLo.textContent = `You lost! The correct number was ${random}.`;
+        hiLo.style.color = "red";
         document.querySelector("#userGuesses").textContent = "";
         losses++;
         document.querySelector("#playBtn").style.display = "inline";
