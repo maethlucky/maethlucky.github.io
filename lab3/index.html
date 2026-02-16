@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Quiz</title>
+
+    <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js"></script>
+</head>
+
+<body>
+    <h1>CSS Quiz</h1>
+
+    1. What is the CSS property to set the font color?
+
+    <br>
+
+    <div id="q1"></div>
+
+    <span id="q1Output"></span>
+
+    <br>
+
+    2. What is the CSS property to set the font size?
+    <br> <input type="text" id="q2">
+
+    <br> <span id="q2Output"></span>
+
+
+    <br> 3. What is used to facilitate a multi-colmn layout?
+    <br> 
+    <select>
+        <option>flexbox</option>
+        <option>column</option>
+        <option>inline</option>
+        <option>block</option>
+    </select>
+
+    <br> <span id="q3Output"></span>
+
+    <br> 4. To make an element half the size of the screen, what percentage should it be set to?
+    <br> <input type="number" min="0" max="100" step="1" id="q4">
+
+    <br> <span id="q4Output"></span>
+
+    <br> 5. Select styles you can use while hovering
+    <br> 
+    <label><input type="checkbox" id="q5a">active</label>
+    <label><input type="checkbox" id="q5b">hover</label>
+    <label><input type="checkbox" id="q5c">onClick</label>
+    <label><input type="checkbox" id="q5d">select</label>
+
+    <br> <span id="q5Output"></span>
+
+    <br><button>Submit Quiz</button>
+
+    <br> <span id="scoreNum"></span>
+</body>
+
+</html>
