@@ -1,0 +1,46 @@
+body {
+    background-image: url("../img/img.jpg");
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+h3 {
+    margin: 0;
+    color: black;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+span {
+    display: block;
+    font-size: 1.5em;
+    background-color: lightblue;
+    min-height: 1.3em;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+label {
+    color: black;
+    font-size: 1.2em;
+}
+
+button:hover {
+    text-decoration: underline;  
+}
+
+#playBtn {
+    font-size: 1.5em;
+}
