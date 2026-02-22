@@ -8,55 +8,83 @@
 
     <script src="js/script.js" defer></script>
     <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
-    <h1>CSS Quiz</h1>
+    <h1>Music Quiz</h1>
 
-    1. What is the CSS property to set the font color?
+    <br>
+
+    <span class="question">1. Which artist is featured on the song "See You Again" by Tyler, the Creator?</span>
 
     <br>
 
     <div id="q1"></div>
 
-    <span id="q1Output"></span>
+    <div class="output">
+        <img id="q1Image">
+        <span id="q1Output"></span>
+    </div>
 
     <br>
 
-    2. What is the CSS property to set the font size?
+    <span class="question">2. Which artist currently holds the record for the most Grammy wins?</span>
     <br> <input type="text" id="q2">
 
-    <br> <span id="q2Output"></span>
+    <br>
+    <div class="output">
+        <img id="q2Image">
+        <span id="q2Output"></span>
+    </div>
 
-
-    <br> 3. What is used to facilitate a multi-colmn layout?
+    <br> 
+    <span class="question">3. Which artist has not featured on a song with PinkPantheress?</span>
     <br> 
     <select>
-        <option>flexbox</option>
-        <option>column</option>
-        <option>inline</option>
-        <option>block</option>
+        <option>Zara Larsson</option>
+        <option>Tinashe</option>
+        <option>Bladee</option>
+        <option>Kelela</option>
     </select>
 
-    <br> <span id="q3Output"></span>
-
-    <br> 4. To make an element half the size of the screen, what percentage should it be set to?
-    <br> <input type="number" min="0" max="100" step="1" id="q4">
-
-    <br> <span id="q4Output"></span>
-
-    <br> 5. Select styles you can use while hovering
     <br> 
-    <label><input type="checkbox" id="q5a">active</label>
-    <label><input type="checkbox" id="q5b">hover</label>
-    <label><input type="checkbox" id="q5c">onClick</label>
-    <label><input type="checkbox" id="q5d">select</label>
+    <div class="output">
+        <img id="q3Image">
+        <span id="q3Output"></span>
+    </div>
+    
+    <br> <span class="question">4. How many minutes long is the average song?</span>
+    <br> <input type="number" min="1" step="1" id="q4">
 
-    <br> <span id="q5Output"></span>
+    <br>
+    <div class="output">
+        <img id="q4Image">
+        <span id="q4Output"></span>
+    </div>
+    
+
+    <br> <span class="question">5. Which two rappers were involved in a prolific rap beef in 2024?</span>
+    <br> 
+    <label><input type="checkbox" id="q5a">Kendrick Lamar</label>
+    <label><input type="checkbox" id="q5b">Pusha T</label>
+    <label><input type="checkbox" id="q5c">Drake</label>
+    <label><input type="checkbox" id="q5d">Kanye West</label>
+
+    <br> 
+    <div class="output">
+        <img id="q5Image">
+        <span id="q5Output"></span>
+    </div>
 
     <br><button>Submit Quiz</button>
 
-    <br> <span id="scoreNum"></span>
+    <br>
+    <div class="output">
+        <span id="scoreNum"></span>
+        <br> <span id="quizCount"></span>
+    </div>
+    
 </body>
 
 </html>

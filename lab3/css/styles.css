@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background-image: url("../img/background.jpg");
+}
+
+h1 {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+img {
+    height: 1em;
+}
+
+.question {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+label {
+    background-color: white;
+    color: rgb(75, 74, 74);
+}
+
+.output {
+    display: inline-block;
+    margin: 10px auto;
+    min-height: 1em;
+    background-color: white;
+    font-size: 1.2em;
+    font-weight: 1000;
+}
+
+button {
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+button:hover {
+    border: 1px solid gray;
+    color: gray;
+}

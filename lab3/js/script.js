@@ -3,11 +3,11 @@ document.querySelector("button").addEventListener("click", gradeQuiz);
 shuffleQ1Choices();
 
 function shuffleQ1Choices() {
-    let q1Choices = ["font-color", "color", "text-color", "fontColor"];
+    let q1Choices = ["Kali Uchis", "A$AP Rocky", "Rex Orange County", "Frank Ocean"];
 
     q1Choices = _.shuffle(q1Choices);
 
-    for (choice of q1Choices) {
+    for (let choice of q1Choices) {
         let radioElement = document.createElement("input");
         radioElement.type = "radio";
         radioElement.name = "q1";
@@ -21,13 +21,21 @@ function shuffleQ1Choices() {
     }
 }
 
-function gradeQuiz() {
-    let score = 0;
+let score = 0;
+let quizCount = 0;
+if (localStorage.quizCount) {
+    quizCount = localStorage.getItem("quizCount");
+} else {
+    localStorage.setItem("quizCount", 0);
+}
 
-    let q1Answer = "color";
-    let q2Answer = "font-size";
-    let q3Answer = "flexbox";
-    let q4Answer = 50;
+function gradeQuiz() {
+    score = 0;
+
+    let q1Answer = "Kali Uchis";
+    let q2Answer = "Beyonce";
+    let q3Answer = "Tinashe";
+    let q4Answer = 3;
 
     let q1 = document.querySelector("input[name=q1]:checked");
     let q2 = document.querySelector("#q2");
@@ -45,57 +53,61 @@ function gradeQuiz() {
     let q4Output = document.querySelector("#q4Output");
     let q5Output = document.querySelector("#q5Output");
 
-    if (q1.value == q1Answer) {
-        q1Output.textContent = "Correct!";
-        q1Output.style.color = "green";
-        score++;
-    } else {
-        q1Output.textContent = "Incorrect!";
-        q1Output.style.color = "red";
-    }
+    let q1Image = document.querySelector("#q1Image");
+    let q2Image = document.querySelector("#q2Image");
+    let q3Image = document.querySelector("#q3Image");
+    let q4Image = document.querySelector("#q4Image");
+    let q5Image = document.querySelector("#q5Image");
 
-    if (q2.value == q2Answer) {
-        q2Output.textContent = "Correct!";
-        q2Output.style.color = "green";
-        score++;
-    } else {
-        q2Output.textContent = "Incorrect!";
-        q2Output.style.color = "red";
-    }
-
-    if (q3.value == q3Answer) {
-        q3Output.textContent = "Correct!";
-        q3Output.style.color = "green";
-        score++;
-    } else {
-        q3Output.textContent = "Incorrect!";
-        q3Output.style.color = "red";
-    }
-
-    if (q4.value == q4Answer) {
-        q4Output.textContent = "Correct!";
-        q4Output.style.color = "green";
-        score++;
-    } else {
-        q4Output.textContent = "Incorrect!";
-        q4Output.style.color = "red";
-    }
+    grade(q1, q1Answer, q1Output, q1Image);
+    grade(q2, q2Answer, q2Output, q2Image);
+    grade(q3, q3Answer, q3Output, q3Image);
+    grade(q4, q4Answer, q4Output, q4Image);
 
     if (
         q5a.checked &&
-        q5b.checked &&
-        !q5c.checked &&
+        !q5b.checked &&
+        q5c.checked &&
         !q5d.checked
     ) {
         q5Output.textContent = "Correct!";
         q5Output.style.color = "green";
+        q5Image.src = "img/check.png";
         score++;
     } else {
         q5Output.textContent = "Incorrect!";
         q5Output.style.color = "red";
+        q5Image.src = "img/x.png";
     }
 
     score *= 20;
+    quizCount++;
+    localStorage.setItem("quizCount", quizCount);
 
-    document.querySelector("#scoreNum").textContent = `Your total score is: ${score}`;
+    if (score >= 80) {
+        document.querySelector("#scoreNum").textContent = `Your total score is ${score}! Congrats on the good score!`;
+        document.querySelector("#scoreNum").style.color = "green";
+    } else {
+        document.querySelector("#scoreNum").textContent = `Your total score is ${score}!`;
+        document.querySelector("#scoreNum").style.color = "black";
+    }
+
+    if (quizCount == 1) {
+        document.querySelector("#quizCount").textContent = `You have taken the quiz 1 time.`;
+    } else {
+        document.querySelector("#quizCount").textContent = `You have taken the quiz ${quizCount} times.`;
+    }
+}
+
+function grade(userAnswer, correctAnswer, outputText, outputImage) {
+    if (userAnswer.value == correctAnswer) {
+        outputText.textContent = "Correct!";
+        outputText.style.color = "green";
+        outputImage.src = "img/check.png";
+        score++;
+    } else {
+        outputText.textContent = "Inorrect!";
+        outputText.style.color = "red";
+        outputImage.src = "img/x.png";
+    }
 }
