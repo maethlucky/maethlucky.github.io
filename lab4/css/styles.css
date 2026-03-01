@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(168, 208, 255);
+    font-family: 'Roboto', sans-serif;
+    padding: 40px 0;
+}
+
+h1 {
+    width: fit-content;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    margin-inline: auto;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+legend {
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+fieldset {
+    width: fit-content;
+    line-height: 1.4;
+    border: 2px dotted black;
+    margin: 0 auto;
+}
+
+#submitBtn {
+    display: block;
+    font-size: 1em;
+    margin-block: 10px;
+    margin-inline: auto;
+}
+
+#submissionErrors {
+    text-align: center;
+}
