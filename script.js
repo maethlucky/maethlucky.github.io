@@ -6,12 +6,16 @@ document.querySelector("#darkModeSwitch").addEventListener("click", toggleDarkMo
 document.querySelector("#aboutBtn").addEventListener("click", showAboutWindow);
 
 document.addEventListener("keydown", (e) => {
-    if (e.key == "Escape") overlay.style.opacity = "0";
+    if (e.key == "Escape") {
+        overlay.style.opacity = "0";
+        overlay.style.pointerEvents = "none";
+    }
 });
 
 function showAboutWindow() {
     console.log("Displaying pop-up");
     overlay.style.opacity = "1";
+    overlay.style.pointerEvents = "auto";
 }
 
 function toggleDarkMode() {
