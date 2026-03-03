@@ -23,7 +23,8 @@ body {
 }
 
 .modal {
-    width: 800px;
+    width: fit-content;
+    max-height: 85vh;
     padding: 20px;
     border-radius: 10px;
     background: white;
@@ -34,18 +35,21 @@ body {
     display: flex;
     gap: 20px;
     text-align: left;
-    font-size: 1.4em;
+    font-size: clamp(1rem, 1.2vw + 0.6rem, 1.4em);
     font-weight: 300;
+    width: 800px;
 }
 
 #textBox {
-    width: 900px;
+    width: auto;
+    flex: 1 1 320px;
+    min-width: 0;
 }
 
 table {
-  border-collapse: collapse; 
-  border-spacing: 0 0;  
-  margin-top: 10px; 
+    border-collapse: collapse;
+    border-spacing: 0 0;
+    margin-top: 10px;
 }
 
 th {
@@ -59,9 +63,10 @@ td {
     border: 1px solid gray;
 }
 
-th, td {
-  padding: 8px;
-  text-align: left;
+th,
+td {
+    padding: 8px;
+    text-align: left;
 }
 
 .modal h2 {
@@ -79,7 +84,7 @@ th, td {
 
 #list {
     margin-left: 25px;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 #closeMessage {
@@ -128,6 +133,8 @@ h3 {
     justify-content: center;
     gap: 7px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding: 0 12px;
 }
 
 .nav-row a {
@@ -146,9 +153,8 @@ h3 {
 #darkMode {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    inset: 0;
     pointer-events: none;
     z-index: 9999;
 
@@ -228,15 +234,15 @@ input:checked+.slider:before {
 }
 
 #swap1 {
-    width: 1700px;
-    height: 1000px;
+  width: min(700px, 92vw);   /* responsive width, bigger */
+  aspect-ratio: 3 / 1;     /* matches 1700x1000 exactly */
+  margin: 0 auto;
 }
 
 #swap2 {
-    width: 1000px;
-    height: 800px;
-    justify-self: center;
-    z-index: 0;
+  width: min(520px, 92vw);   /* responsive width, smaller */
+  aspect-ratio: 5 / 4;       /* matches 1000x800 exactly */
+  margin: 0 auto;
 }
 
 .img-swap img {
