@@ -13,22 +13,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- color blend overlay for dark mode -->
+    <div id="darkMode"></div>
+
     <header>
         <h1>Welcome!</h1>
     </header>
 
-    <h3>CST 363 Assignments</h3>
+    <div id="darkModeRow">
+        <span id="darkModeLabel">Dark Mode</span>
+        <label id="darkModeSwitch" class="switch">
+        <input type="checkbox" id="darkModeBox">
+        <span class="slider round"></span>
+        </label>
+    </div>
 
-    <div id="mouseCircle"></div>
+    <div id="popupOverlay" class="overlay hidden">
+        <div class="modal">
+            <h2>About Me!</h2>
+            <hr>
+            <div id="layout">
+                <p>
+                    Hi! My name is Lucas, and I'm a third year computer science major
+                    with a concentration in networks and security. I've been fascinated
+                    with technology since I was a little kid, and now I'm looking to make
+                    a career out of it!
+                </p>
+                <img id="right-img" src="me1.png" alt="selfie1"><br>
+            </div>
+            <span>Press ESC to close.</span>
+        </div>
+    </div>
+
+
+    <br>
 
     <nav>
-        <a href="hw1/">HW 1</a> 
-        <a href="hw2/">HW 2</a> 
-        <a href="lab1/">Lab 1</a> 
-        <a href="lab2/tutorial/">Lab 2</a> 
-        <a href="lab3/">Lab 3</a>
-        <a href="lab4/">Lab 4</a>
+        <div id="aboutBtn" href="about.html">About Me</div>
+
+        <br>
+  
+        <h3>CST 363 Assignments</h3>
+        <div class="nav-row">
+            <a href="hw1/">HW 1</a> 
+            <a href="hw2/">HW 2</a> 
+            <a href="lab1/">Lab 1</a> 
+            <a href="lab2/tutorial/">Lab 2</a> 
+            <a href="lab3/">Lab 3</a>
+            <a href="lab4/">Lab 4</a>
+        </div>
+
+        <h3>Cybersecurity Programs</h3>
+        <div class="nav-row">
+            <a href="https://github.com/maethlucky/Caesar-Cipher-Decoder">Caesar Cipher</a> 
+            <a href="https://github.com/maethlucky/Python-Keylogger">Keylogger</a> 
+            <a href="https://github.com/maethlucky/Blockchain-Simulator">Blockchain</a> 
+            <a href="https://github.com/maethlucky/ABAC-Simulator">ABAC</a> 
+            <a href="https://github.com/maethlucky/ACM-Simulator">ACM</a>
+        </div>
     </nav>
+
+    <img id="bottom-img" src="me2.png" alt="selfie2">
+
 
 </body>
 </html>
