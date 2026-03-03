@@ -33,15 +33,67 @@
             <h2>About Me!</h2>
             <hr>
             <div id="layout">
-                <p>
+                <div id="textBox">
+                    <p>
                     Hi! My name is Lucas, and I'm a third year computer science major
                     with a concentration in networks and security. I've been fascinated
-                    with technology since I was a little kid, and now I'm looking to make
-                    a career out of it!
-                </p>
-                <img id="right-img" src="me1.png" alt="selfie1"><br>
+                    with technology since I was a little kid, and now I'm looking for an
+                    opportunity to make a career out of it!
+                    </p>
+
+                    <br> 
+                    <h4>Interests</h4>
+                    <div id="list">
+                        <ul>
+                            <li>Video Games</li>
+                            <li>Programming</li>
+                            <li>Listening to Music</li>
+                            <li>Music Production</li>
+                            <li>Playing the Guitar</li>
+                        </ul>
+                    </div>
+
+                    <br>
+                    <h4>Programming Experience</h4>
+                    <table>
+                        <tr>
+                            <th>Language</th>
+                            <th># of Years</th>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>4 years</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>3 years</td>
+                        </tr>
+                        <tr>
+                            <td>Javascript</td>
+                            <td>2 years</td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td>2 years</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>1 year</td>
+                        </tr>
+                    </table>
+                    
+                    <br>
+                    <p>
+                        Follow the links on the home page to
+                        see some of my projects from throughout the years!
+                    </p>
+                </div>
+                <div class="img-swap" id="swap1">
+                    <img src="me1.png" alt="selfie1"><br>
+                    <img id="dark1" src="me1-dark.png" alt="dark-selfie1">
+                </div>
             </div>
-            <span>Press ESC to close.</span>
+            <span id="closeMessage">Press ESC to close.</span>
         </div>
     </div>
 
@@ -73,8 +125,10 @@
         </div>
     </nav>
 
-    <img id="bottom-img" src="me2.png" alt="selfie2">
-
+    <div class="img-swap" id="swap2"> 
+        <img src="me2.png" alt="selfie2">
+        <img id="dark2" src="me2-dark.png" alt="dark-selfie2">
+    </div>
 
 </body>
 </html>

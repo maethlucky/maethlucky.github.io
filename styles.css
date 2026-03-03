@@ -10,17 +10,20 @@ body {
 }
 
 .overlay {
+    display: flex;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     align-items: center;
     justify-content: center;
-    z-index: 10000;
+    z-index: 1;
+    transition: opacity 0.5s;
 }
 
 .modal {
-    width: 1200px;
+    width: 800px;
     padding: 20px;
     border-radius: 10px;
     background: white;
@@ -30,11 +33,35 @@ body {
 #layout {
     display: flex;
     gap: 20px;
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: 300;
 }
 
-#layout p {
-    font-size: 1.2em;
-    font-weight: 300;
+#textBox {
+    width: 900px;
+}
+
+table {
+  border-collapse: collapse; 
+  border-spacing: 0 0;  
+  margin-top: 10px; 
+}
+
+th {
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+    font-weight: 400;
+}
+
+td {
+    border: 1px solid gray;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
 }
 
 .modal h2 {
@@ -44,6 +71,19 @@ body {
 
 .modal hr {
     margin-block: 20px;
+}
+
+.modal h4 {
+    font-weight: 500;
+}
+
+#list {
+    margin-left: 25px;
+    margin-top: 10px; 
+}
+
+#closeMessage {
+    color: gray;
 }
 
 h1 {
@@ -181,4 +221,37 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.img-swap {
+    position: relative;
+}
+
+#swap1 {
+    width: 1700px;
+    height: 1000px;
+}
+
+#swap2 {
+    width: 1000px;
+    height: 800px;
+    justify-self: center;
+    z-index: 0;
+}
+
+.img-swap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.img-swap #dark1 {
+    opacity: 0;
+}
+
+.img-swap #dark2 {
+    opacity: 0;
 }
