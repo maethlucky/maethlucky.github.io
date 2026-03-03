@@ -4,6 +4,7 @@ let overlay = document.querySelector("#popupOverlay");
 
 document.querySelector("#darkModeSwitch").addEventListener("click", toggleDarkMode);
 document.querySelector("#aboutBtn").addEventListener("click", showAboutWindow);
+document.querySelector("#closeMessage").addEventListener("click", hideAboutWindow);
 
 document.addEventListener("keydown", (e) => {
     if (e.key == "Escape") {
@@ -16,6 +17,11 @@ function showAboutWindow() {
     console.log("Displaying pop-up");
     overlay.style.opacity = "1";
     overlay.style.pointerEvents = "auto";
+}
+
+function hideAboutWindow() {
+    overlay.style.opacity = "0";
+    overlay.style.pointerEvents = "none";
 }
 
 function toggleDarkMode() {

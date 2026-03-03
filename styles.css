@@ -92,6 +92,11 @@ td {
     color: gray;
 }
 
+#closeMessage:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 h1 {
     background-image: linear-gradient(to bottom, #4ed7f0, white);
     padding-block: 20px;
